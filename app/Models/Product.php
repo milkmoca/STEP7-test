@@ -14,6 +14,7 @@ class Product extends Model
         'price',
         'stock',
         'company_id',
+        'comany_name',
         'comment',
         'img_path',
     ];
@@ -25,6 +26,6 @@ class Product extends Model
 
     public function company()
     {
-        return $this->belongsToMany(Company::class, 'id', 'name');
+        return $this->belongsToMany(Company::class, 'id', 'company_name');
     }
 }

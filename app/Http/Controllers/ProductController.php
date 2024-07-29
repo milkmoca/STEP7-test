@@ -32,7 +32,7 @@ class ProductController extends Controller
         }
 
         if($search = $request->search){
-            $query->where('name',  'LIKE', "%{$search}%");
+            $query->where('company_id',  'LIKE', "%{$search}%");
         }
     
         
